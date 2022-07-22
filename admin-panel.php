@@ -178,7 +178,7 @@ function get_specs(){
     
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> KLINIK KARIMUN HUSADA </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -222,15 +222,15 @@ function get_specs(){
   <body style="padding-top:50px;">
   
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
+    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:25%; margin-top: 3%">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Book Appointment</a>
-      <a class="list-group-item list-group-item-action" href="#app-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">Appointment History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescriptions</a>
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Booking Jadwal Periksa</a>
+      <a class="list-group-item list-group-item-action" href="#app-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">Riwayat Pemeriksaan</a>
+      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Resep Dokter</a>
       
     </div><br>
   </div>
@@ -245,7 +245,7 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;"> Book My Appointment</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;"> Jadwal Periksa</h4>
                       <script>
                         function clickDiv(id) {
                           document.querySelector(id).click();
@@ -253,7 +253,7 @@ function get_specs(){
                       </script>                      
                       <p class="links cl-effect-1">
                         <a href="#list-home" onclick="clickDiv('#list-home-list')">
-                          Book Appointment
+                          Booking Jadwal Periksa
                         </a>
                       </p>
                     </div>
@@ -264,11 +264,11 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">My Appointments</h2>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Pemeriksaan</h2>
                     
                       <p class="cl-effect-1">
                         <a href="#app-hist" onclick="clickDiv('#list-pat-list')">
-                          View Appointment History
+                          Lihat Riwayat Pemeriksaan
                         </a>
                       </p>
                     </div>
@@ -280,11 +280,11 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Prescriptions</h2>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Resep Dokter</h2>
                     
                       <p class="cl-effect-1">
                         <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                          View Prescription List
+                          Lihat list Resep Dokter
                         </a>
                       </p>
                     </div>
@@ -303,7 +303,7 @@ function get_specs(){
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <center><h4>Create an appointment</h4></center><br>
+              <center><h4>Buat Jadwal Periksa</h4></center><br>
               <form class="form-group" method="post" action="admin-panel.php">
                 <div class="row">
                   
@@ -322,11 +322,11 @@ function get_specs(){
         
 
                     <div class="col-md-4">
-                          <label for="spec">Specialization:</label>
+                          <label for="spec">Spesialisasi:</label>
                         </div>
                         <div class="col-md-8">
                           <select name="spec" class="form-control" id="spec">
-                              <option value="" disabled selected>Select Specialization</option>
+                              <option value="" disabled selected>Pilih Spesialisasi</option>
                               <?php 
                               display_specs();
                               ?>
@@ -351,10 +351,10 @@ function get_specs(){
 
                   </script>
 
-              <div class="col-md-4"><label for="doctor">Doctors:</label></div>
+              <div class="col-md-4"><label for="doctor">Dokter:</label></div>
                 <div class="col-md-8">
                     <select name="doctor" class="form-control" id="doctor" required="required">
-                      <option value="" disabled selected>Select Doctor</option>
+                      <option value="" disabled selected>Pilih Dokter</option>
                 
                       <?php display_docs(); ?>
                     </select>
@@ -414,21 +414,21 @@ function get_specs(){
 
                   
                   <div class="col-md-4"><label for="consultancyfees">
-                                Consultancy Fees
+                                Biaya Konsultasi
                               </label></div>
                               <div class="col-md-8">
                               <!-- <div id="docFees">Select a doctor</div> -->
                               <input class="form-control" type="text" name="docFees" id="docFees" readonly="readonly"/>
                   </div><br><br>
 
-                  <div class="col-md-4"><label>Appointment Date</label></div>
+                  <div class="col-md-4"><label>Tanggal Pemeriksaan</label></div>
                   <div class="col-md-8"><input type="date" class="form-control datepicker" name="appdate"></div><br><br>
 
-                  <div class="col-md-4"><label>Appointment Time</label></div>
+                  <div class="col-md-4"><label>Waktu Pemeriksaan</label></div>
                   <div class="col-md-8">
                     <!-- <input type="time" class="form-control" name="apptime"> -->
                     <select name="apptime" class="form-control" id="apptime" required="required">
-                      <option value="" disabled selected>Select Time</option>
+                      <option value="" disabled selected>Pilih Waktu</option>
                       <option value="08:00:00">8:00 AM</option>
                       <option value="10:00:00">10:00 AM</option>
                       <option value="12:00:00">12:00 PM</option>
@@ -439,7 +439,7 @@ function get_specs(){
                   </div><br><br>
 
                   <div class="col-md-4">
-                    <input type="submit" name="app-submit" value="Create new entry" class="btn btn-primary" id="inputbtn">
+                    <input type="submit" name="app-submit" value="Buat Jadwal" class="btn btn-primary" id="inputbtn">
                   </div>
                   <div class="col-md-8"></div>                  
                 </div>
@@ -455,11 +455,11 @@ function get_specs(){
                 <thead>
                   <tr>
                     
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Consultancy Fees</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Current Status</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Biaya Pemeriksaan</th>
+                    <th scope="col">Tanggal Pemeriksaan</th>
+                    <th scope="col">Waktu Pemeriksaan</th>
+                    <th scope="col">Status Terkini</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -487,16 +487,16 @@ function get_specs(){
                           <td>
                     <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
                     {
-                      echo "Active";
+                      echo "Aktif";
                     }
                     if(($row['userStatus']==0) && ($row['doctorStatus']==1))  
                     {
-                      echo "Cancelled by You";
+                      echo "Dibatalkan oleh Saya";
                     }
 
                     if(($row['userStatus']==1) && ($row['doctorStatus']==0))  
                     {
-                      echo "Cancelled by Doctor";
+                      echo "Dibatalkan oleh Dokter";
                     }
                         ?></td>
 
@@ -506,11 +506,11 @@ function get_specs(){
 
 													
 	                        <a href="admin-panel.php?ID=<?php echo $row['ID']?>&cancel=update" 
-                              onClick="return confirm('Are you sure you want to cancel this appointment ?')"
+                              onClick="return confirm('Apakah Kamu yakin Mau Membatalkan Pemeriksaan ?')"
                               title="Cancel Appointment" tooltip-placement="top" tooltip="Remove"><button class="btn btn-danger">Cancel</button></a>
 	                        <?php } else {
 
-                                echo "Cancelled";
+                                echo "Dibatalkan";
                                 } ?>
                         
                         </td>
@@ -529,14 +529,14 @@ function get_specs(){
                 <thead>
                   <tr>
                     
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Appointment ID</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Diseases</th>
-                    <th scope="col">Allergies</th>
-                    <th scope="col">Prescriptions</th>
-                    <th scope="col">Bill Payment</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">ID Pemeriksaan</th>
+                    <th scope="col">Tanggal Pemeriksaan</th>
+                    <th scope="col">Waktu Pemeriksaan</th>
+                    <th scope="col">Penyakit</th>
+                    <th scope="col">Alergi</th>
+                    <th scope="col">Resep Dokter</th>
+                    <th scope="col">Biaya Pembayaran</th>
                   </tr>
                 </thead>
                 <tbody>

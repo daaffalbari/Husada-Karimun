@@ -53,7 +53,7 @@ if(isset($_POST['docsub1']))
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> KLINIK HUSADA KARIMUNF </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -127,17 +127,17 @@ if(isset($_POST['docsub1']))
   </style>
   <body style="padding-top:50px;">
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME RECEPTIONIST </h3>
+    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang Resepsionis </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:25%;margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
-      <a class="list-group-item list-group-item-action" href="#list-doc" id="list-doc-list"  role="tab"    aria-controls="home" data-toggle="list">Doctor List</a>
-      <a class="list-group-item list-group-item-action" href="#list-pat" id="list-pat-list"  role="tab" data-toggle="list" aria-controls="home">Patient List</a>
-      <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list"  role="tab" data-toggle="list" aria-controls="home">Appointment Details</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list"  role="tab" data-toggle="list" aria-controls="home">Prescription List</a>
-      <a class="list-group-item list-group-item-action" href="#list-settings" id="list-adoc-list"  role="tab" data-toggle="list" aria-controls="home">Add Doctor</a>
-      <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Delete Doctor</a>
+      <a class="list-group-item list-group-item-action" href="#list-doc" id="list-doc-list"  role="tab"    aria-controls="home" data-toggle="list">List Dokter</a>
+      <a class="list-group-item list-group-item-action" href="#list-pat" id="list-pat-list"  role="tab" data-toggle="list" aria-controls="home">List Pasien</a>
+      <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list"  role="tab" data-toggle="list" aria-controls="home">Detail Pemeriksaan</a>
+      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list"  role="tab" data-toggle="list" aria-controls="home">List Resep</a>
+      <a class="list-group-item list-group-item-action" href="#list-settings" id="list-adoc-list"  role="tab" data-toggle="list" aria-controls="home">Tambah Dokter</a>
+      <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Hapus Dokter</a>
       <a class="list-group-item list-group-item-action" href="#list-mes" id="list-mes-list"  role="tab" data-toggle="list" aria-controls="home">Queries</a>
       
     </div><br>
@@ -154,7 +154,7 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Doctor List</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">List Dokter</h4>
                       <script>
                         function clickDiv(id) {
                           document.querySelector(id).click();
@@ -162,7 +162,7 @@ if(isset($_POST['docsub1']))
                       </script> 
                       <p class="links cl-effect-1">
                         <a href="#list-doc" onclick="clickDiv('#list-doc-list')">
-                          View Doctors
+                          Lihat Dokter
                         </a>
                       </p>
                     </div>
@@ -173,11 +173,11 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Patient List</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">List Pasien</h4>
                       
                       <p class="cl-effect-1">
                         <a href="#app-hist" onclick="clickDiv('#list-pat-list')">
-                          View Patients
+                          Lihat Pasien
                         </a>
                       </p>
                     </div>
@@ -189,11 +189,11 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Appointment Details</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Detail Pemeriksaan</h4>
                     
                       <p class="cl-effect-1">
                         <a href="#app-hist" onclick="clickDiv('#list-app-list')">
-                          View Appointments
+                          Lihat Pemeriksaan
                         </a>
                       </p>
                     </div>
@@ -206,11 +206,11 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Prescription List</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">List Resep</h4>
                     
                       <p class="cl-effect-1">
                         <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                          View Prescriptions
+                          Lihat Resep
                         </a>
                       </p>
                     </div>
@@ -222,13 +222,13 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-plus fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Manage Doctors</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Kelola Dokter</h4>
                     
                       <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Add Doctors</a>
+                        <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Tambah Dokter</a>
                         &nbsp|
                         <a href="#app-hist" onclick="clickDiv('#list-ddoc-list')">
-                          Delete Doctors
+                          Hapus Dokter
                         </a>
                       </p>
                     </div>
@@ -263,11 +263,11 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Specialization</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Spesialisasi</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
-                    <th scope="col">Fees</th>
+                    <th scope="col">Biaya Konsultasi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -312,12 +312,12 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                  <th scope="col">Patient ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Gender</th>
+                  <th scope="col">ID Pasien</th>
+                    <th scope="col">Nama Depan</th>
+                    <th scope="col">Nama Belakang</th>
+                    <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Contact</th>
+                    <th scope="col">No Telp</th>
                     <th scope="col">Password</th>
                   </tr>
                 </thead>
@@ -365,16 +365,16 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                  <th scope="col">Doctor</th>
-                    <th scope="col">Patient ID</th>
-                    <th scope="col">Appointment ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Disease</th>
-                    <th scope="col">Allergy</th>
-                    <th scope="col">Prescription</th>
+                  <th scope="col">Dokter</th>
+                    <th scope="col">ID Pasien</th>
+                    <th scope="col">ID Pemeriksaan</th>
+                    <th scope="col">Nama Depan</th>
+                    <th scope="col">Nama Belakang</th>
+                    <th scope="col">Tanggal Pemeriksaan</th>
+                    <th scope="col">Waktu Pemeriksaan</th>
+                    <th scope="col">Penyakit</th>
+                    <th scope="col">Alergi</th>
+                    <th scope="col">Resep</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -434,18 +434,18 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                  <th scope="col">Appointment ID</th>
-                  <th scope="col">Patient ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Gender</th>
+                  <th scope="col">ID Pemeriksaan</th>
+                  <th scope="col">Id Pasien</th>
+                    <th scope="col">Nama Depan</th>
+                    <th scope="col">Nama Belakang</th>
+                    <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Consultancy Fees</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Appointment Status</th>
+                    <th scope="col">No telp</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Biaya Pemeriksaan</th>
+                    <th scope="col">Tanggal Pemeriksaan</th>
+                    <th scope="col">Waktu Pemeriksaan</th>
+                    <th scope="col">Status Pemeriksaan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -497,30 +497,28 @@ if(isset($_POST['docsub1']))
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
         <form class="form-group" method="post" action="admin-panel1.php">
           <div class="row">
-                  <div class="col-md-4"><label>Doctor Name:</label></div>
+                  <div class="col-md-4"><label>Nama Dokter:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control" name="doctor" onkeydown="return alphaOnly(event);" required></div><br><br>
-                  <div class="col-md-4"><label>Specialization:</label></div>
+                  <div class="col-md-4"><label>Spesialisasi:</label></div>
                   <div class="col-md-8">
                    <select name="special" class="form-control" id="special" required="required">
-                      <option value="head" name="spec" disabled selected>Select Specialization</option>
-                      <option value="General" name="spec">General</option>
-                      <option value="Cardiologist" name="spec">Cardiologist</option>
-                      <option value="Neurologist" name="spec">Neurologist</option>
-                      <option value="Pediatrician" name="spec">Pediatrician</option>
+                      <option value="head" name="spec" disabled selected>Pilih Spesialisasi</option>
+                      <option value="Dokter Umum" name="spec">Dokter Umum</option>
+                      <option value="Dokter Anak" name="spec">Dokter Anak</option>
                     </select>
                     </div><br><br>
                   <div class="col-md-4"><label>Email ID:</label></div>
                   <div class="col-md-8"><input type="email"  class="form-control" name="demail" required></div><br><br>
                   <div class="col-md-4"><label>Password:</label></div>
                   <div class="col-md-8"><input type="password" class="form-control"  onkeyup='check();' name="dpassword" id="dpassword"  required></div><br><br>
-                  <div class="col-md-4"><label>Confirm Password:</label></div>
+                  <div class="col-md-4"><label>Konfirmasi Password Password:</label></div>
                   <div class="col-md-8"  id='cpass'><input type="password" class="form-control" onkeyup='check();' name="cdpassword" id="cdpassword" required>&nbsp &nbsp<span id='message'></span> </div><br><br>
                    
                   
-                  <div class="col-md-4"><label>Consultancy Fees:</label></div>
+                  <div class="col-md-4"><label>Biaya Konsultasi:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br>
                 </div>
-          <input type="submit" name="docsub" value="Add Doctor" class="btn btn-primary">
+          <input type="submit" name="docsub" value="Tambah Dokter" class="btn btn-primary">
         </form>
       </div>
 
@@ -532,7 +530,7 @@ if(isset($_POST['docsub1']))
                   <div class="col-md-8"><input type="email"  class="form-control" name="demail" required></div><br><br>
                   
                 </div>
-          <input type="submit" name="docsub1" value="Delete Doctor" class="btn btn-primary" onclick="confirm('do you really want to delete?')">
+          <input type="submit" name="docsub1" value="Hapus Dokter" class="btn btn-primary" onclick="confirm('do you really want to delete?')">
         </form>
       </div>
 

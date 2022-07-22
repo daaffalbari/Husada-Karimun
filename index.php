@@ -22,10 +22,10 @@
   if (document.getElementById('password').value ==
     document.getElementById('cpassword').value) {
     document.getElementById('message').style.color = '#5dd05d';
-    document.getElementById('message').innerHTML = 'Matched';
+    document.getElementById('message').innerHTML = 'Password sesuai';
   } else {
     document.getElementById('message').style.color = '#f55252';
-    document.getElementById('message').innerHTML = 'Not Matching';
+    document.getElementById('message').innerHTML = 'Password Tidak Sesuai';
   }
 }
 
@@ -63,11 +63,11 @@ function checklen()
           </li>
   
           <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>ABOUT US</h6></a>
+            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>TENTANG KAMI</h6></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+            <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>KONTAK</h6></a>
           </li>
         </ul>
       </div>
@@ -147,12 +147,12 @@ function checklen()
 
                             
                             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Login as Docter</h3>
+                                <h3  class="register-heading">Login Sebagai Dokter</h3>
                                 <form method="post" action="func1.php">
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="User Name *" name="username3" onkeydown="return alphaOnly(event);" required/>
+                                            <input type="text" class="form-control" placeholder="Username *" name="username3" onkeydown="return alphaOnly(event);" required/>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -168,12 +168,12 @@ function checklen()
 
 
                             <div class="tab-pane fade show" id="admin" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Login as Admin</h3>
+                                <h3  class="register-heading">Login Sebagai Admin</h3>
                                 <form method="post" action="func3.php">
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="User Name *" name="username1" onkeydown="return alphaOnly(event);" required/>
+                                            <input type="text" class="form-control" placeholder="Username *" name="username1" onkeydown="return alphaOnly(event);" required/>
                                         </div>
                                         
 
