@@ -25,6 +25,14 @@ Hospital Management System using MySQL, Php and Bootstrap
 7. Import the file 'myhmsdb.sql' inside your newly created database and click ok.
 8. Open a new tab and type 'localhost/foldername' in the url of your browser
 9. Hurray! That's it!
+
+## Cara clone 
+1. Buka CMD/Terminal 
+2. Arahin ke xampp/htdocs
+3. Jalanin perintah berikut <code>git clone https://github.com/daaffalbari/Husada-Karimun.git</code>
+4. Buka text editor kalian, Happy coding!!!
+
+
     
 ### SOFTWARES USED
   - XAMPP was installed on the Ubuntu 19.04 machine and APACHE2 Server and MySQL were initialized. And, files were built inside opt/lampp/htdocs/myhmsp
