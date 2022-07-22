@@ -29,9 +29,14 @@ Hospital Management System using MySQL, Php and Bootstrap
 ## Cara clone 
 1. Buka CMD/Terminal 
 2. Arahin ke xampp/htdocs
-3. Jalanin perintah berikut <code>git clone https://github.com/daaffalbari/Husada-Karimun.git</code>
+3. Jalanin perintah berikut di terminal kalian <code>git clone https://github.com/daaffalbari/Husada-Karimun.git</code>
 4. Buka text editor kalian, Happy coding!!!
 
+## Cara commit dan push 
+1. Setelah kalian melakukan perubahan, disarankan commit terlebih dahulu code kalian dengan perintah <code>git commit -m "Peruhannya (bebas isinya)"</code>
+2. setelah itu push dengan perintah <code>git push -u origin main</code>
+3. Kalau gagal, liat apa salahnya, biasaya harus di pull dulu, dengan perintah <code> git pull </code>
+4. Setealh itu push lagi dengan perintah no 3
 
     
 ### SOFTWARES USED
