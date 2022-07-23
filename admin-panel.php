@@ -26,7 +26,7 @@ if(isset($_POST['app-submit']))
   $contact = $_SESSION['contact'];
   $doctor=$_POST['doctor'];
   $email=$_SESSION['email'];
-  # $fees=$_POST['fees'];
+  // $fees=$_POST['fees'];
   $docFees=$_POST['docFees'];
 
   $appdate=$_POST['appdate'];
@@ -429,7 +429,7 @@ function get_specs(){
                     <!-- <input type="time" class="form-control" name="apptime"> -->
                     <select name="apptime" class="form-control" id="apptime" required="required">
                       <option value="" disabled selected>Pilih Waktu</option>
-                      <option value="08:00:00">8:00 AM</option>
+                      <option value="08:00:00">7:00 AM</option>
                       <option value="10:00:00">10:00 AM</option>
                       <option value="12:00:00">12:00 PM</option>
                       <option value="14:00:00">2:00 PM</option>
