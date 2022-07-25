@@ -27,12 +27,12 @@ if(isset($_POST['app_search_submit']))
   <table class='table table-hover'>
     <thead>
       <tr>
-        <th scope='col'>First Name</th>
-        <th scope='col'>Last Name</th>
+        <th scope='col'>Nama Depan</th>
+        <th scope='col'>Nama Belakang</th>
         <th scope='col'>Email</th>
-        <th scope='col'>Contact</th>
-        <th scope='col'>Doctor Name</th>
-        <th scope='col'>Consultancy Fees</th>
+        <th scope='col'>Kontak</th>
+        <th scope='col'>Nama Dokter</th>
+        <th scope='col'>Biaya Konsultasi</th>
         <th scope='col'>Appointment Date</th>
         <th scope='col'>Appointment Time</th>
         <th scope='col'>Appointment Status</th>
