@@ -312,12 +312,12 @@ if(isset($_GET['cancel']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
+                    <th scope="col">Nama Depan</th>
+                    <th scope="col">Nama Belakang</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Consultancy Fees</th>
+                    <th scope="col">Kontak</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Biaya Konsultasi</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
                   </tr>
@@ -361,13 +361,13 @@ if(isset($_GET['cancel']))
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
         <form class="form-group" method="post" action="admin-panel1.php">
           <div class="row">
-                  <div class="col-md-4"><label>Doctor Name:</label></div>
+                  <div class="col-md-4"><label>Nama Dokter:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control" name="doctor" required></div><br><br>
                   <div class="col-md-4"><label>Password:</label></div>
                   <div class="col-md-8"><input type="password" class="form-control"  name="dpassword" required></div><br><br>
                   <div class="col-md-4"><label>Email ID:</label></div>
                   <div class="col-md-8"><input type="email"  class="form-control" name="demail" required></div><br><br>
-                  <div class="col-md-4"><label>Consultancy Fees:</label></div>
+                  <div class="col-md-4"><label>Biaya Konsultasi:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br>
                 </div>
           <input type="submit" name="docsub" value="Add Doctor" class="btn btn-primary">
