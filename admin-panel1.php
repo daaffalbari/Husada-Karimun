@@ -11,7 +11,7 @@ if(isset($_POST['docsub']))
   $demail=$_POST['demail'];
   $spec=$_POST['special'];
   $docFees=$_POST['docFees'];
-  $query="insert into doctb(username,password,email,spec,docFees)values('$doctor','$dpassword','$demail','$spec','$docFees')";
+  $query="insert into doctb(username,password,email,spec,docFees, name)values('$doctor','$dpassword','$demail','$spec','$docFees')";
   $result=mysqli_query($con,$query);
   if($result)
     {
@@ -505,6 +505,7 @@ if(isset($_POST['docsub1']))
                       <option value="head" name="spec" disabled selected>Pilih Spesialisasi</option>
                       <option value="Dokter Umum" name="spec">Dokter Umum</option>
                       <option value="Dokter Anak" name="spec">Dokter Anak</option>
+                      <option value="Dokter Gigi" name="spec">Dokter Gigi</option>
                     </select>
                     </div><br><br>
                   <div class="col-md-4"><label>Email ID:</label></div>
