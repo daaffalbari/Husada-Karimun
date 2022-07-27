@@ -11,7 +11,8 @@ if(isset($_POST['docsub']))
   $demail=$_POST['demail'];
   $spec=$_POST['special'];
   $docFees=$_POST['docFees'];
-  $query="insert into doctb(username,password,email,spec,docFees)values('$doctor','$dpassword','$demail','$spec','$docFees')";
+  $formalname=$_POST['formalname'];
+  $query="insert into doctb(username,password,email,spec,docFees,name)values('$doctor','$dpassword','$demail','$spec','$docFees','$formalname')";
   $result=mysqli_query($con,$query);
   if($result)
     {
@@ -517,6 +518,8 @@ if(isset($_POST['docsub1']))
                   
                   <div class="col-md-4"><label>Biaya Konsultasi:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br>
+                  <div class="col-md-4"><label>Nama Formal:</label></div>
+                  <div class="col-md-8"><input type="text" class="form-control"  name="formalname" required></div><br><br>
                 </div>
           <input type="submit" name="docsub" value="Tambah Dokter" class="btn btn-primary">
         </form>
