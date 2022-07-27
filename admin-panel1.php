@@ -527,6 +527,8 @@ if(isset($_POST['docsub1']))
                   
                   <div class="col-md-4"><label>Biaya Konsultasi:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control"  name="docFees" required></div><br><br>
+                  <div class="col-md-4"><label>Nama Formal:</label></div>
+                  <div class="col-md-8"><input type="text" class="form-control"  name="formalname" required></div><br><br>
                 </div>
           <input type="submit" name="docsub" value="Tambah Dokter" class="btn btn-primary">
         </form>
