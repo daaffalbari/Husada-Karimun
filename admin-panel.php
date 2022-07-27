@@ -222,7 +222,7 @@ function get_specs(){
   <body style="padding-top:50px;">
   
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang &nbsp<?php echo $username ?> 
+    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang <?php echo $username ?> 
    </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:25%; margin-top: 3%">
@@ -310,7 +310,7 @@ function get_specs(){
                   <!-- <?php
 
                         $con=mysqli_connect("localhost","root","","myhmsdb");
-                        $query=mysqli_query($con,"select username,spec from doctb");
+                        $query=mysqli_query($con,"select * from doctb");
                         $docarray = array();
                           while($row =mysqli_fetch_assoc($query))
                           {
@@ -361,7 +361,7 @@ function get_specs(){
                   </div><br/><br/> 
 
 
-                        <script>
+            <script>
               document.getElementById('doctor').onchange = function updateFees(e) {
                 var selection = document.querySelector(`[value=${this.value}]`).getAttribute('data-value');
                 document.getElementById('docFees').value = selection;
@@ -572,7 +572,17 @@ function get_specs(){
 
                               <a href="admin-panel.php?ID=<?php echo $row['ID']?>">
                               <input type ="hidden" name="ID" value="<?php echo $row['ID']?>"/>
-                              <input type = "submit" onclick="alert('Bill Paid Successfully');" name ="generate_bill" class = "btn btn-success" value="Pay Bill"/>
+                              <input type = "submit" id= "Bill" name ="generate_bill" class = "btn btn-success" value="Pay Bill"/>
+                                <script>
+                                  Bill.onclick = function() {
+                                    alert("Pembayaran Berhasil");
+                                    let bill = document.getElementById("Bill");
+                                    bill.removeAttribute("value");
+                                    bill.removeAttribute("onclick");
+                                    bill.removeAttribute("class");
+                                    bill.setAttribute("value", "Pembayaran Berhasil");
+                                  }
+                                </script>
                               </a>
                               </td>
                               </form>

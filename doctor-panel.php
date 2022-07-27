@@ -2,7 +2,7 @@
 <?php 
 include('func1.php');
 $con=mysqli_connect("localhost","root","","myhmsdb");
-$doctor = $_SESSION['dname'];
+$doctor = $_SESSION['name'];
 if(isset($_GET['cancel']))
   {
     $query=mysqli_query($con,"update appointmenttb set doctorStatus='0' where ID = '".$_GET['ID']."'");
@@ -101,7 +101,7 @@ if(isset($_GET['cancel']))
   </style>
   <body style="padding-top:50px;">
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family:'IBM Plex Sans', sans-serif;"> Selamat Datang &nbsp<?php echo $_SESSION['dname'] ?>  </h3>
+    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family:'IBM Plex Sans', sans-serif;"> Selamat Datang <?php echo $_SESSION['name'] ?>  </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:18%;margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
@@ -181,7 +181,7 @@ if(isset($_GET['cancel']))
                   <?php 
                     $con=mysqli_connect("localhost","root","","myhmsdb");
                     global $con;
-                    $dname = $_SESSION['dname'];
+                    $dname = $_SESSION['name'];
                     $query = "select pid,ID,fname,lname,gender,email,contact,appdate,apptime,userStatus,doctorStatus from appointmenttb where doctor='$dname';";
                     $result = mysqli_query($con,$query);
                     while ($row = mysqli_fetch_array($result)){

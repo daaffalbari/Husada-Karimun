@@ -7,7 +7,7 @@ $appdate='';
 $apptime='';
 $fname = '';
 $lname= '';
-$doctor = $_SESSION['dname'];
+$doctor = $_SESSION['name'];
 if(isset($_GET['pid']) && isset($_GET['ID']) && ($_GET['appdate']) && isset($_GET['apptime']) && isset($_GET['fname']) && isset($_GET['lname'])) {
 $pid = $_GET['pid'];
   $ID = $_GET['ID'];
@@ -112,7 +112,7 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
 
 <body style="padding-top:50px;">
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang &nbsp<?php echo $doctor ?>
+    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Selamat Datang <?php echo $doctor ?>
    </h3>
 
    <div class="tab-pane" id="list-pres" role="tabpanel" aria-labelledby="list-pres-list">

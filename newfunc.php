@@ -57,10 +57,10 @@ function display_docs()
  $result = mysqli_query($con,$query);
  while( $row = mysqli_fetch_array($result) )
  {
-  $username = $row['username'];
+  $name = $row['name'];
   $price = $row['docFees'];
   $spec = $row['spec'];
-  echo '<option value="' .$username. '" data-value="'.$price.'" data-spec="'.$spec.'">'.$username.'</option>';
+  echo '<option value="' .$name. '" data-value="'.$price.'" data-spec="'.$spec.'">'.$name.'</option>';
  }
 }
 

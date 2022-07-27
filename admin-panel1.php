@@ -6,12 +6,13 @@ include('newfunc.php');
 
 if(isset($_POST['docsub']))
 {
-  $doctor=$_POST['doctor'];
+  $udoctor=$_POST['udoctor'];
+  $ndoctor = $_POST['ndoctor'];
   $dpassword=$_POST['dpassword'];
   $demail=$_POST['demail'];
   $spec=$_POST['special'];
   $docFees=$_POST['docFees'];
-  $query="insert into doctb(username,password,email,spec,docFees, name)values('$doctor','$dpassword','$demail','$spec','$docFees')";
+  $query="insert into doctb(username,password,email,spec,docFees, name)values('$udoctor','$dpassword','$demail','$spec','$docFees', '$ndoctor')";
   $result=mysqli_query($con,$query);
   if($result)
     {
@@ -277,14 +278,15 @@ if(isset($_POST['docsub1']))
                     $query = "select * from doctb";
                     $result = mysqli_query($con,$query);
                     while ($row = mysqli_fetch_array($result)){
-                      $username = $row['username'];
+                      $name = $row['name'];
                       $spec = $row['spec'];
                       $email = $row['email'];
                       $password = $row['password'];
                       $docFees = $row['docFees'];
+                      $name = $row['name'];
                       
                       echo "<tr>
-                        <td>$username</td>
+                        <td>$name</td>
                         <td>$spec</td>
                         <td>$email</td>
                         <td>$password</td>
@@ -304,7 +306,7 @@ if(isset($_POST['docsub1']))
        <div class="col-md-8">
       <form class="form-group" action="patientsearch.php" method="post">
         <div class="row">
-        <div class="col-md-10"><input type="text" name="patient_contact" placeholder="Enter Contact" class = "form-control"></div>
+        <div class="col-md-10"><input type="text" name="patient_contact" placeholder="Masukan Nama Pasien" class = "form-control"></div>
         <div class="col-md-2"><input type="submit" name="patient_search_submit" class="btn btn-primary" value="Search"></div></div>
       </form>
     </div>
@@ -426,7 +428,7 @@ if(isset($_POST['docsub1']))
          <div class="col-md-8">
       <form class="form-group" action="appsearch.php" method="post">
         <div class="row">
-        <div class="col-md-10"><input type="text" name="app_contact" placeholder="Enter Contact" class = "form-control"></div>
+        <div class="col-md-10"><input type="text" name="app_contact" placeholder="Masukan nama pasien" class = "form-control"></div>
         <div class="col-md-2"><input type="submit" name="app_search_submit" class="btn btn-primary" value="Search"></div></div>
       </form>
     </div>
@@ -441,7 +443,7 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Email</th>
                     <th scope="col">No telp</th>
-                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Username Dokter</th>
                     <th scope="col">Biaya Pemeriksaan</th>
                     <th scope="col">Tanggal Pemeriksaan</th>
                     <th scope="col">Waktu Pemeriksaan</th>
@@ -498,7 +500,14 @@ if(isset($_POST['docsub1']))
         <form class="form-group" method="post" action="admin-panel1.php">
           <div class="row">
                   <div class="col-md-4"><label>Nama Dokter:</label></div>
-                  <div class="col-md-8"><input type="text" class="form-control" name="doctor" onkeydown="return alphaOnly(event);" required></div><br><br>
+                  <div class="col-md-8"><input type="text" class="form-control" name="ndoctor" required></div><br><br>
+                  <div class="col-md-4">
+                    <label for="udoctor">Username Dokter:</label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" name="udoctor" class="form-control" required >
+                  </div>
+                  <br><br>
                   <div class="col-md-4"><label>Spesialisasi:</label></div>
                   <div class="col-md-8">
                    <select name="special" class="form-control" id="special" required="required">
